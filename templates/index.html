@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mars Shoes Laundry — Perawatan Sepatu Terbaik & Terpercaya</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: #fbfaf6;
+      color: #1f2924;
+    }
+    .font-serif-display {
+      font-family: 'Cormorant Garamond', serif;
+    }
+    /* Motif garis vertikal pastel sage-cream lembut */
+    .hero-stripes {
+      background-image: repeating-linear-gradient(
+        90deg,
+        #eef4ec 0px,
+        #eef4ec 36px,
+        #fbf9f3 36px,
+        #fbf9f3 72px
+      );
+    }
+    /* Bingkai scalloped pink lembut */
+    .scallop-card {
+      position: relative;
+      background: #ffffff;
+      border-radius: 28px;
+      border: 3px solid #f4c6d0;
+      box-shadow: 0 18px 40px -15px rgba(45, 74, 62, 0.14), 0 0 0 8px #fdf2f5;
+    }
+    .scallop-badge {
+      background: #fdf2f5;
+      border: 1.5px dashed #e89eb0;
+      color: #9e3b56;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body class="antialiased">
+
+  <!-- Top Promo Bar -->
+  <div class="bg-[#243c32] text-[#f5f3eb] text-xs sm:text-sm py-2.5 px-4 text-center tracking-wide">
+    ✨ Gratis Antar-Jemput Area Kota Yogyakarta (Min. 2 Pasang) • Garansi Cuci Ulang 48 Jam • Buka Setiap Hari 09.00–21.00 WIB
+  </div>
+
+  <!-- Sticky Navbar -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-[#e5ebe4]">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-4">
+      <a href="#beranda" class="flex items-center gap-2.5">
+        <div class="w-9 h-9 rounded-xl bg-[#243c32] text-white flex items-center justify-center font-serif-display font-bold text-xl shadow-sm">
+          M
+        </div>
+        <div>
+          <span class="font-serif-display font-bold text-xl text-[#243c32] tracking-tight block leading-none">Mars Shoes</span>
+          <span class="text-[10px] uppercase tracking-[0.2em] text-[#7c9487] font-semibold">Laundry & Care</span>
+        </div>
+      </a>
+
+      <!-- Navigation Links -->
+      <nav class="hidden md:flex items-center gap-6 text-xs font-semibold tracking-wider text-[#3d5247]">
+        <a href="#daftar-harga" class="hover:text-[#c75b7a] transition">DAFTAR HARGA</a>
+        <a href="#before-after" class="hover:text-[#c75b7a] transition">BEFORE-AFTER</a>
+        <a href="#pesan" class="hover:text-[#c75b7a] transition">PESAN</a>
+        <a href="#testimoni" class="hover:text-[#c75b7a] transition">TESTIMONI</a>
+        <a href="#kontak" class="hover:text-[#c75b7a] transition">KONTAK</a>
+      </nav>
+
+      <!-- Role Switcher Tabs -->
+      <div class="flex items-center bg-[#f1f5f0] p-1 rounded-xl border border-[#dce5db] text-xs font-semibold">
+        <button onclick="switchRole('pelanggan')" id="tab-pelanggan" class="px-3 py-1.5 rounded-lg bg-[#243c32] text-white shadow-sm transition">
+          Pelanggan
+        </button>
+        <button onclick="switchRole('admin')" id="tab-admin" class="px-3 py-1.5 rounded-lg text-[#486154] hover:text-[#243c32] transition">
+          Admin Cabang
+        </button>
+        <button onclick="switchRole('uml')" id="tab-uml" class="px-3 py-1.5 rounded-lg text-[#486154] hover:text-[#243c32] transition hidden sm:inline-block">
+          UML & PBO
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== VIEW 1: HALAMAN PELANGGAN ==================== -->
+  <main id="view-pelanggan">
+
+    <!-- HERO SECTION -->
+    <section id="beranda" class="hero-stripes py-14 sm:py-20 border-b border-[#e3ebe2]">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 grid lg:grid-cols-12 gap-10 items-center">
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/90 border border-[#d6e2d5] text-xs font-semibold text-[#2d4a3e] shadow-sm">
+            <span class="w-2 h-2 rounded-full bg-[#e37b98]"></span>
+            Spesialis Perawatan Sepatu & Kulit Premium Yogyakarta
+          </div>
+          <h1 class="font-serif-display text-4xl sm:text-5xl lg:text-[54px] font-bold text-[#1d332a] leading-[1.12]">
+            Perawatan Sepatu Terbaik & Terpercaya di <span class="text-[#c75b7a] italic">Mars Shoes Laundry</span>
+          </h1>
+          <p class="text-[#4a5f54] text-base sm:text-lg leading-relaxed max-w-xl">
+            Menggunakan cairan pembersih pH-netral khusus material <em>canvas, suede, nubuck, mesh,</em> hingga <em>genuine leather</em>. Ditangani teknisi berpengalaman dengan sistem pelacakan status pengerjaan secara real-time.
+          </p>
+          <div class="flex flex-wrap gap-3.5 pt-2">
+            <a href="#pesan" class="px-6 py-3.5 rounded-xl bg-[#243c32] hover:bg-[#1a2d25] text-white font-semibold text-sm shadow-md transition">
+              Buat Pesanan Sekarang
+            </a>
+            <a href="#daftar-harga" class="px-6 py-3.5 rounded-xl bg-white hover:bg-[#fdf2f5] text-[#243c32] border border-[#d5dfd4] font-semibold text-sm transition">
+              Lihat Daftar Harga Resmi
+            </a>
+          </div>
+          <div class="grid grid-cols-3 gap-4 pt-4 max-w-md border-t border-[#d8e3d7]">
+            <div>
+              <p class="font-serif-display text-2xl font-bold text-[#243c32]">3 Cabang</p>
+              <p class="text-xs text-[#5d7368]">Jogja Kota & Sekitar</p>
+            </div>
+            <div>
+              <p class="font-serif-display text-2xl font-bold text-[#243c32]">4.9 / 5.0</p>
+              <p class="text-xs text-[#5d7368]">Rating Pelanggan</p>
+            </div>
+            <div>
+              <p class="font-serif-display text-2xl font-bold text-[#243c32]">100% Aman</p>
+              <p class="text-xs text-[#5d7368]">Tanpa Mesin Pengering</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Scalloped Pink Frame Card -->
+        <div class="lg:col-span-5">
+          <div class="scallop-card p-6 sm:p-8">
+            <div class="flex items-center justify-between mb-5">
+              <span class="scallop-badge text-[11px] font-bold uppercase tracking-widest px-3 py-1 rounded-full">
+                Mars Shoes Care Standard
+              </span>
+              <span class="text-xs font-semibold text-[#6b8276]">SOP 5 Tahap</span>
+            </div>
+            <h3 class="font-serif-display text-2xl font-bold text-[#243c32] mb-4">
+              Standar Operasional Perawatan Kami
+            </h3>
+            <ul class="space-y-3.5 text-sm text-[#43574d]">
+              <li class="flex items-start gap-3">
+                <span class="w-6 h-6 rounded-full bg-[#fdf2f5] text-[#c75b7a] font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">1</span>
+                <span><strong>Inspeksi Material & Noda:</strong> Identifikasi jenis bahan upper, midsole, dan tingkat oksidasi sebelum pencucian.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="w-6 h-6 rounded-full bg-[#fdf2f5] text-[#c75b7a] font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">2</span>
+                <span><strong>Deep Brush & PH-Neutral Cleaner:</strong> Penyikatan lembut menggunakan bulu kuda (<em>horsehair brush</em>) agar serat kain tidak rusak.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="w-6 h-6 rounded-full bg-[#fdf2f5] text-[#c75b7a] font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">3</span>
+                <span><strong>Cold Air Drying & UV Sterilizer:</strong> Pengeringan suhu ruang dengan sirkulasi udara terkontrol serta sterilisasi anti-bakteri.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="w-6 h-6 rounded-full bg-[#fdf2f5] text-[#c75b7a] font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">4</span>
+                <span><strong>Quality Control & Parfum Sepatu:</strong> Pemeriksaan akhir sebelum pengemasan rapi dengan silica gel.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DAFTAR HARGA RESMI -->
+    <section id="daftar-harga" class="py-16 sm:py-20 max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="text-xs font-bold uppercase tracking-[0.2em] text-[#c75b7a]">Layanan Unggulan Kami</span>
+        <h2 class="font-serif-display text-3xl sm:text-4xl font-bold text-[#243c32] mt-2">Daftar Harga Resmi Layanan</h2>
+        <p class="text-sm sm:text-base text-[#566b60] mt-2">Tarif transparan sesuai kebutuhan perawatan dan jenis material sepatu Anda.</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Paket 1 -->
+        <div class="bg-white rounded-2xl border border-[#e2ebe1] p-6 flex flex-col justify-between hover:shadow-lg transition">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-xs font-bold px-2.5 py-1 rounded-md bg-[#eef4ec] text-[#243c32]">Paling Populer</span>
+              <span class="text-xs text-[#6e8378]">2–3 Hari</span>
+            </div>
+            <h3 class="font-serif-display text-2xl font-bold text-[#243c32]">Deep Clean</h3>
+            <p class="text-2xl font-bold text-[#c75b7a] mt-2">Rp 45.000</p>
+            <p class="text-xs text-[#5d7368] mt-3 leading-relaxed">
+              Pencucian menyeluruh pada seluruh bagian sepatu: <em>upper, midsole, outsole, insole,</em> dan tali sepatu.
+            </p>
+          </div>
+          <button onclick="pilihPaket('Deep Clean')" class="mt-6 w-full py-2.5 rounded-xl bg-[#243c32] hover:bg-[#1a2d25] text-white text-xs font-semibold transition">
+            Pilih Layanan Ini
+          </button>
+        </div>
+
+        <!-- Paket 2 -->
+        <div class="bg-white rounded-2xl border border-[#e2ebe1] p-6 flex flex-col justify-between hover:shadow-lg transition">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-xs font-bold px-2.5 py-1 rounded-md bg-[#fdf2f5] text-[#c75b7a]">Ekspres</span>
+              <span class="text-xs text-[#6e8378]">4–6 Jam</span>
+            </div>
+            <h3 class="font-serif-display text-2xl font-bold text-[#243c32]">Fast Clean</h3>
+            <p class="text-2xl font-bold text-[#c75b7a] mt-2">Rp 30.000</p>
+            <p class="text-xs text-[#5d7368] mt-3 leading-relaxed">
+              Pembersihan cepat bagian luar (<em>upper & midsole</em>) untuk sepatu yang membutuhkan pemakaian segera.
+            </p>
+          </div>
+          <button onclick="pilihPaket('Fast Clean')" class="mt-6 w-full py-2.5 rounded-xl bg-[#eef4ec] hover:bg-[#243c32] text-[#243c32] hover:text-white text-xs font-semibold transition">
+            Pilih Layanan Ini
+          </button>
+        </div>
+
+        <!-- Paket 3 -->
+        <div class="bg-white rounded-2xl border border-[#e2ebe1] p-6 flex flex-col justify-between hover:shadow-lg transition">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-xs font-bold px-2.5 py-1 rounded-md bg-[#eef4ec] text-[#243c32]">Midsole Care</span>
+              <span class="text-xs text-[#6e8378]">3–4 Hari</span>
+            </div>
+            <h3 class="font-serif-display text-2xl font-bold text-[#243c32]">Unyellowing</h3>
+            <p class="text-2xl font-bold text-[#c75b7a] mt-2">Rp 65.000</p>
+            <p class="text-xs text-[#5d7368] mt-3 leading-relaxed">
+              Menghilangkan noda menguning akibat oksidasi pada karet <em>midsole</em> putih agar kembali cerah bersih.
+            </p>
+          </div>
+          <button onclick="pilihPaket('Unyellowing')" class="mt-6 w-full py-2.5 rounded-xl bg-[#eef4ec] hover:bg-[#243c32] text-[#243c32] hover:text-white text-xs font-semibold transition">
+            Pilih Layanan Ini
+          </button>
+        </div>
+
+        <!-- Paket 4 -->
+        <div class="bg-white rounded-2xl border border-[#e2ebe1] p-6 flex flex-col justify-between hover:shadow-lg transition">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-xs font-bold px-2.5 py-1 rounded-md bg-[#fdf2f5] text-[#c75b7a]">Restorasi</span>
+              <span class="text-xs text-[#6e8378]">4–5 Hari</span>
+            </div>
+            <h3 class="font-serif-display text-2xl font-bold text-[#243c32]">Repaint Leather</h3>
+            <p class="text-2xl font-bold text-[#c75b7a] mt-2">Rp 110.000</p>
+            <p class="text-xs text-[#5d7368] mt-3 leading-relaxed">
+              Pewarnaan ulang dan nutrisi pelembap khusus sepatu kulit (<em>leather/suede</em>) yang memudar atau tergores.
+            </p>
+          </div>
+          <button onclick="pilihPaket('Repaint Leather')" class="mt-6 w-full py-2.5 rounded-xl bg-[#eef4ec] hover:bg-[#243c32] text-[#243c32] hover:text-white text-xs font-semibold transition">
+            Pilih Layanan Ini
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALERI HASIL BEFORE & AFTER (PERMANEN DARI /static/images/) -->
+    <section id="before-after" class="py-16 bg-[#f3f7f2] border-y border-[#e1eae0]">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+          <span class="text-xs font-bold uppercase tracking-[0.2em] text-[#c75b7a]">Portofolio Pengerjaan</span>
+          <h2 class="font-serif-display text-3xl sm:text-4xl font-bold text-[#243c32] mt-2">Galeri Hasil Before & After</h2>
+          <p class="text-sm sm:text-base text-[#566b60] mt-2">
+            Perbandingan kondisi sepatu sebelum dan sesudah menjalani proses perawatan di Mars Shoes Laundry.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-7">
+          <!-- Item 1 -->
+          <div class="bg-white rounded-2xl overflow-hidden border border-[#dce6db] shadow-sm">
+            <div class="relative aspect-[4/3] bg-[#eef4ec] overflow-hidden">
+              <img src="/static/images/deep-clean.png" alt="Hasil Deep Cleaning Mars Shoes Laundry" class="w-full h-full object-cover">
+              <span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-[#243c32]/90 text-white text-[11px] font-semibold">
+                Deep Cleaning
+              </span>
+            </div>
+            <div class="p-5">
+              <h3 class="font-serif-display text-xl font-bold text-[#243c32]">Canvas Sneakers — Deep Clean</h3>
+              <p class="text-xs text-[#5a6f64] mt-1.5 leading-relaxed">
+                Pembersihan kotoran lumpur dan noda membandel pada bahan kanvas serta pemutihan kembali bagian <em>rubber toe cap</em>.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="bg-white rounded-2xl overflow-hidden border border-[#dce6db] shadow-sm">
+            <div class="relative aspect-[4/3] bg-[#eef4ec] overflow-hidden">
+              <img src="/static/images/unyellowing.png" alt="Hasil Unyellowing Mars Shoes Laundry" class="w-full h-full object-cover">
+              <span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-[#c75b7a]/90 text-white text-[11px] font-semibold">
+                Unyellowing Treatment
+              </span>
+            </div>
+            <div class="p-5">
+              <h3 class="font-serif-display text-xl font-bold text-[#243c32]">White Sneakers — Unyellowing</h3>
+              <p class="text-xs text-[#5a6f64] mt-1.5 leading-relaxed">
+                Perawatan khusus untuk menghilangkan noda kekuningan akibat oksidasi pada permukaan <em>midsole</em> putih.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="bg-white rounded-2xl overflow-hidden border border-[#dce6db] shadow-sm">
+            <div class="relative aspect-[4/3] bg-[#eef4ec] overflow-hidden">
+              <img src="/static/images/repaint-leather.png" alt="Hasil Repaint Leather Mars Shoes Laundry" class="w-full h-full object-cover">
+              <span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-[#243c32]/90 text-white text-[11px] font-semibold">
+                Repaint & Leather Care
+              </span>
+            </div>
+            <div class="p-5">
+              <h3 class="font-serif-display text-xl font-bold text-[#243c32]">Leather Boots — Repaint & Polish</h3>
+              <p class="text-xs text-[#5a6f64] mt-1.5 leading-relaxed">
+                Restorasi warna asli kulit yang pudar disertai pemberian <em>leather conditioner</em> agar tekstur kembali lentur dan berkilau.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FORMULIR PEMESANAN, LIVE TRACKING & NOTA DIGITAL -->
+    <section id="pesan" class="py-16 sm:py-20 max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="grid lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- Formulir Pemesanan -->
+        <div class="lg:col-span-6 bg-white rounded-2xl border border-[#e0e9df] p-6 sm:p-8 shadow-sm">
+          <span class="text-xs font-bold uppercase tracking-[0.2em] text-[#c75b7a]">Reservasi Layanan</span>
+          <h2 class="font-serif-display text-3xl font-bold text-[#243c32] mt-1">Formulir Pemesanan Layanan</h2>
+          <p class="text-xs sm:text-sm text-[#5b7065] mt-1.5 mb-6">
+            Silakan lengkapi data pemesanan di bawah ini untuk registrasi layanan dan penerbitan nota digital resmi.
+          </p>
+
+          <form id="orderForm" onsubmit="submitOrder(event)" class="space-y-4">
+            <div>
+              <label class="block text-xs font-semibold text-[#2e473b] mb-1.5">Nama Pelanggan</label>
+              <input type="text" id="inputNama" required placeholder="Masukkan nama lengkap pelanggan"
+                class="w-full px-4 py-2.5 rounded-xl border border-[#d5e0d4] text-sm focus:outline-none focus:border-[#243c32]">
+            </div>
+
+            <div class="grid sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-semibold text-[#2e473b] mb-1.5">Nomor WhatsApp</label>
+                <input type="tel" id="inputWa" required placeholder="0812xxxxxxxx"
+                  class="w-full px-4 py-2.5 rounded-xl border border-[#d5e0d4] text-sm focus:outline-none focus:border-[#243c32]">
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-[#2e473b] mb-1.5">Pilih Cabang</label>
+                <select id="inputCabang" class="w-full px-4 py-2.5 rounded-xl border border-[#d5e0d4] text-sm bg-white focus:outline-none focus:border-[#243c32]">
+                  <option value="Cabang Jogokaryan">Cabang Jogokaryan</option>
+                  <option value="Cabang Gondokusuman">Cabang Gondokusuman</option>
+                  <option value="Cabang Kotagede">Cabang Kotagede</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="grid sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-semibold text-[#2e473b] mb-1.5">Jenis Layanan</label>
+                <select id="inputPaket" class="w-full px-4 py-2.5 rounded-xl border border-[#d5e0d4] text-sm bg-white focus:outline-none focus:border-[#243c32]">
+                  <option value="Deep Clean" data-harga="45000">Deep Clean — Rp 45.000</option>
+                  <option value="Fast Clean" data-harga="30000">Fast Clean — Rp 30.000</option>
+                  <option value="Unyellowing" data-harga="65000">Unyellowing — Rp 65.000</option>
+                  <option value="Repaint Leather" data-harga="110000">Repaint Leather — Rp 110.000</option>
+                </select>
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-[#2e473b] mb-1.5">Merk & Tipe Sepatu</label>
+                <input type="text" id="inputSepatu" required placeholder="Contoh: Nike Air Force 1 Putih"
+                  class="w-full px-4 py-2.5 rounded-xl border border-[#d5e0d4] text-sm focus:outline-none focus:border-[#243c32]">
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-xs font-semibold text-[#2e473b] mb-1.5">Catatan Khusus (Opsional)</label>
+              <textarea id="inputCatatan" rows="2" placeholder="Contoh: Bagian tali mohon disikat lembut"
+                class="w-full px-4 py-2.5 rounded-xl border border-[#d5e0d4] text-sm focus:outline-none focus:border-[#243c32]"></textarea>
+            </div>
+
+            <button type="submit" class="w-full py-3.5 rounded-xl bg-[#243c32] hover:bg-[#1a2d25] text-white font-semibold text-sm shadow-sm transition">
+              Buat Pesanan & Terbitkan Nota Digital
+            </button>
+          </form>
+        </div>
+
+        <!-- Live Tracking & Nota Digital -->
+        <div class="lg:col-span-6 space-y-6">
+          <!-- Live Status -->
+          <div class="bg-white rounded-2xl border border-[#e0e9df] p-6 sm:p-7 shadow-sm">
+            <div class="flex items-center justify-between mb-4">
+              <div>
+                <span class="text-xs font-bold uppercase tracking-[0.2em] text-[#c75b7a]">Pelacakan Real-Time</span>
+                <h3 class="font-serif-display text-2xl font-bold text-[#243c32]">Live Status Pengerjaan</h3>
+              </div>
+              <span class="inline-flex items-center gap-1.5 text-xs font-semibold text-emerald-700 bg-emerald-50 px-3 py-1 rounded-full">
+                <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span> Aktif
+              </span>
+            </div>
+
+            <div class="mb-4">
+              <label class="block text-xs font-semibold text-[#475d52] mb-1.5">Pilih Nama Pelanggan / Kode Nota</label>
+              <select id="trackingSelector" onchange="renderTrackingAndNota()" class="w-full px-3.5 py-2.5 rounded-xl border border-[#d5e0d4] text-sm bg-[#f9fbf9] font-medium text-[#243c32]">
+              </select>
+            </div>
+
+            <!-- Progress 4 Tahap -->
+            <div id="trackingProgress" class="bg-[#f6f9f5] rounded-xl p-4 border border-[#e2ebe1]"></div>
+          </div>
+
+          <!-- Nota Digital -->
+          <div id="notaDigitalCard" class="scallop-card p-6 sm:p-7"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONI PELANGGAN (6 KARTU GRID 3x2) -->
+    <section id="testimoni" class="py-16 bg-[#f3f7f2] border-y border-[#e1eae0]">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+          <span class="text-xs font-bold uppercase tracking-[0.2em] text-[#c75b7a]">Ulasan Pelanggan</span>
+          <h2 class="font-serif-display text-3xl sm:text-4xl font-bold text-[#243c32] mt-2">Testimoni Pelanggan Kami</h2>
+          <p class="text-sm text-[#566b60] mt-2">Pengalaman nyata para pelanggan yang telah mempercayakan perawatan sepatunya di Mars Shoes Laundry.</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="bg-white p-6 rounded-2xl border border-[#dce6db] shadow-sm">
+            <div class="text-amber-400 text-sm mb-2">★★★★★</div>
+            <p class="text-xs sm:text-sm text-[#455a4f] leading-relaxed mb-4">
+              "Sepatu lari putih saya yang awalnya penuh noda tanah kembali bersih seperti baru. Wanginya lembut dan tidak menyengat."
+            </p>
+            <p class="font-bold text-sm text-[#243c32]">Charles Leclerc</p>
+            <p class="text-[11px] text-[#73887d]">Layanan Deep Clean • Cabang Jogokaryan</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-2xl border border-[#dce6db] shadow-sm">
+            <div class="text-amber-400 text-sm mb-2">★★★★★</div>
+            <p class="text-xs sm:text-sm text-[#455a4f] leading-relaxed mb-4">
+              "Hasil unyellowing pada midsole Air Force 1 saya sangat memuaskan. Kuningnya hilang merata tanpa merusak lem sepatu."
+            </p>
+            <p class="font-bold text-sm text-[#243c32]">Max Verstappen</p>
+            <p class="text-[11px] text-[#73887d]">Layanan Unyellowing • Cabang Gondokusuman</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-2xl border border-[#dce6db] shadow-sm">
+            <div class="text-amber-400 text-sm mb-2">★★★★★</div>
+            <p class="text-xs sm:text-sm text-[#455a4f] leading-relaxed mb-4">
+              "Fitur pelacakan status pengerjaan dan nota digitalnya sangat membantu. Saya langsung tahu kapan sepatu siap diambil."
+            </p>
+            <p class="font-bold text-sm text-[#243c32]">Lewis Hamilton</p>
+            <p class="text-[11px] text-[#73887d]">Layanan Repaint Leather • Cabang Kotagede</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-2xl border border-[#dce6db] shadow-sm">
+            <div class="text-amber-400 text-sm mb-2">★★★★★</div>
+            <p class="text-xs sm:text-sm text-[#455a4f] leading-relaxed mb-4">
+              "Butuh sepatu bersih mendadak untuk acara kampus, ambil paket Fast Clean 4 jam langsung selesai dan rapi."
+            </p>
+            <p class="font-bold text-sm text-[#243c32]">George Russell</p>
+            <p class="text-[11px] text-[#73887d]">Layanan Fast Clean • Cabang Jogokaryan</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-2xl border border-[#dce6db] shadow-sm">
+            <div class="text-amber-400 text-sm mb-2">★★★★★</div>
+            <p class="text-xs sm:text-sm text-[#455a4f] leading-relaxed mb-4">
+              "Bahan suede sepatu saya tetap halus dan warnanya tidak luntur sama sekali setelah dicuci di sini. Sangat direkomendasikan."
+            </p>
+            <p class="font-bold text-sm text-[#243c32]">Lando Norris</p>
+            <p class="text-[11px] text-[#73887d]">Layanan Deep Clean • Cabang Gondokusuman</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-2xl border border-[#dce6db] shadow-sm">
+            <div class="text-amber-400 text-sm mb-2">★★★★★</div>
+            <p class="text-xs sm:text-sm text-[#455a4f] leading-relaxed mb-4">
+              "Pelayanan admin ramah, gratis antar-jemput area kota sangat memudahkan saat sedang sibuk bekerja."
+            </p>
+            <p class="font-bold text-sm text-[#243c32]">Carlos Sainz</p>
+            <p class="text-[11px] text-[#73887d]">Layanan Deep Clean • Cabang Kotagede</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- KONTAK PERSON & CABANG RESMI -->
+    <section id="kontak" class="py-16 max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="text-xs font-bold uppercase tracking-[0.2em] text-[#c75b7a]">Hubungi Kami</span>
+        <h2 class="font-serif-display text-3xl sm:text-4xl font-bold text-[#243c32] mt-2">Kontak Person & Cabang Resmi</h2>
+        <p class="text-sm text-[#566b60] mt-2">Kunjungi gerai terdekat kami di Yogyakarta atau hubungi layanan pelanggan melalui WhatsApp.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-white p-6 rounded-2xl border border-[#e0e9df]">
+          <span class="text-[11px] font-bold uppercase tracking-wider text-[#c75b7a]">Cabang Utama</span>
+          <h3 class="font-serif-display text-2xl font-bold text-[#243c32] mt-1">Cabang Jogokaryan</h3>
+          <p class="text-xs text-[#54695e] mt-2 leading-relaxed">Jl. Jogokaryan No. 42, Mantrijeron, Kota Yogyakarta, DIY 55143</p>
+          <div class="mt-4 pt-4 border-t border-[#edf2ec] space-y-1.5 text-xs text-[#31493d]">
+            <p><strong>WhatsApp Admin:</strong> +62 812-3456-7801</p>
+            <p><strong>Jam Operasional:</strong> 09.00 – 21.00 WIB</p>
+          </div>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl border border-[#e0e9df]">
+          <span class="text-[11px] font-bold uppercase tracking-wider text-[#c75b7a]">Cabang Tengah</span>
+          <h3 class="font-serif-display text-2xl font-bold text-[#243c32] mt-1">Cabang Gondokusuman</h3>
+          <p class="text-xs text-[#54695e] mt-2 leading-relaxed">Jl. Munggur No. 18, Demangan, Gondokusuman, Kota Yogyakarta, DIY 55221</p>
+          <div class="mt-4 pt-4 border-t border-[#edf2ec] space-y-1.5 text-xs text-[#31493d]">
+            <p><strong>WhatsApp Admin:</strong> +62 812-3456-7802</p>
+            <p><strong>Jam Operasional:</strong> 09.00 – 21.00 WIB</p>
+          </div>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl border border-[#e0e9df]">
+          <span class="text-[11px] font-bold uppercase tracking-wider text-[#c75b7a]">Cabang Timur</span>
+          <h3 class="font-serif-display text-2xl font-bold text-[#243c32] mt-1">Cabang Kotagede</h3>
+          <p class="text-xs text-[#54695e] mt-2 leading-relaxed">Jl. Kemasan No. 29, Prenggan, Kotagede, Kota Yogyakarta, DIY 55172</p>
+          <div class="mt-4 pt-4 border-t border-[#edf2ec] space-y-1.5 text-xs text-[#31493d]">
+            <p><strong>WhatsApp Admin:</strong> +62 812-3456-7803</p>
+            <p><strong>Jam Operasional:</strong> 09.00 – 21.00 WIB</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-8 bg-[#243c32] text-[#f5f3eb] rounded-2xl p-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs sm:text-sm">
+        <div>
+          <p class="font-semibold">Layanan Pusat & Kemitraan: <span class="text-[#f4c6d0]">halo@marsshoeslaundry.id</span></p>
+          <p class="text-[#b8c9bf] text-xs mt-0.5">Instagram Resmi: @marsshoeslaundry.yk</p>
+        </div>
+        <a href="#pesan" class="px-5 py-2.5 rounded-xl bg-[#f4c6d0] text-[#243c32] font-bold text-xs hover:bg-white transition">
+          Reservasi Antar-Jemput
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== VIEW 2: DASHBOARD ADMIN CABANG ==================== -->
+  <section id="view-admin" class="hidden py-10 max-w-6xl mx-auto px-4 sm:px-6 space-y-8">
+    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-[#e0e9df] pb-5">
+      <div>
+        <span class="text-xs font-bold uppercase tracking-[0.2em] text-[#c75b7a]">Panel Operasional Internal</span>
+        <h2 class="font-serif-display text-3xl font-bold text-[#243c32]">Dashboard Admin Cabang</h2>
+      </div>
+      <div class="flex items-center gap-2">
+        <label class="text-xs font-semibold text-[#475d52]">Filter Cabang:</label>
+        <select id="adminBranchFilter" onchange="renderAdminDashboard()" class="px-4 py-2 rounded-xl border border-[#d5e0d4] bg-white text-xs font-bold text-[#243c32]">
+          <option value="ALL">Semua Cabang</option>
+          <option value="Cabang Jogokaryan">Cabang Jogokaryan</option>
+          <option value="Cabang Gondokusuman">Cabang Gondokusuman</option>
+          <option value="Cabang Kotagede">Cabang Kotagede</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Ringkasan KPI -->
+    <div id="adminKpiGrid" class="grid grid-cols-2 lg:grid-cols-4 gap-4"></div>
+
+    <!-- Rincian Pendapatan Per Cabang -->
+    <div class="bg-white rounded-2xl border border-[#e0e9df] p-6">
+      <h3 class="font-serif-display text-xl font-bold text-[#243c32] mb-4">Rincian Pendapatan Setiap Cabang</h3>
+      <div id="branchRevenueCards" class="grid md:grid-cols-3 gap-4"></div>
+    </div>
+
+    <!-- Kelola Status Pesanan -->
+    <div class="bg-white rounded-2xl border border-[#e0e9df] p-6">
+      <h3 class="font-serif-display text-xl font-bold text-[#243c32] mb-1">Kelola Status Pesanan Pelanggan</h3>
+      <p class="text-xs text-[#5d7368] mb-4">Perbarui tahapan pengerjaan: Diterima → Diproses → Selesai → Diambil.</p>
+      <div class="overflow-x-auto">
+        <table class="w-full text-left border-collapse text-xs sm:text-sm">
+          <thead>
+            <tr class="border-b border-[#e3ebe2] text-[#556b60] text-xs uppercase">
+              <th class="py-3 px-3">Kode Nota</th>
+              <th class="py-3 px-3">Nama Pelanggan</th>
+              <th class="py-3 px-3">Cabang</th>
+              <th class="py-3 px-3">Layanan & Sepatu</th>
+              <th class="py-3 px-3">Tarif</th>
+              <th class="py-3 px-3">Status Pengerjaan</th>
+            </tr>
+          </thead>
+          <tbody id="adminOrdersTable" class="divide-y divide-[#eef3ed]"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Data Stok Bahan Habis / Menipis per Cabang -->
+    <div class="bg-white rounded-2xl border border-[#e0e9df] p-6">
+      <h3 class="font-serif-display text-xl font-bold text-[#243c32] mb-1">Data Stok Bahan Habis & Perlu Restock per Cabang</h3>
+      <p class="text-xs text-[#5d7368] mb-4">Pemantauan ketersediaan cairan pembersih, cat kulit, dan perlengkapan operasional tiap cabang.</p>
+      <div class="overflow-x-auto">
+        <table class="w-full text-left border-collapse text-xs sm:text-sm">
+          <thead>
+            <tr class="border-b border-[#e3ebe2] text-[#556b60] text-xs uppercase">
+              <th class="py-3 px-3">Cabang</th>
+              <th class="py-3 px-3">Nama Bahan</th>
+              <th class="py-3 px-3">Sisa Stok</th>
+              <th class="py-3 px-3">Status</th>
+            </tr>
+          </thead>
+          <tbody id="adminStockTable" class="divide-y divide-[#eef3ed]"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== VIEW 3: UML & ARSITEKTUR PBO ==================== -->
+  <section id="view-uml" class="hidden py-12 max-w-5xl mx-auto px-4 sm:px-6 space-y-6">
+    <div class="bg-white rounded-2xl border border-[#e0e9df] p-6 sm:p-8">
+      <span class="text-xs font-bold uppercase tracking-[0.2em] text-[#c75b7a]">Dokumentasi Sistem PBO</span>
+      <h2 class="font-serif-display text-3xl font-bold text-[#243c32] mt-1 mb-4">Struktur Class & Relasi Objek Mars Shoes Laundry</h2>
+      <div class="grid md:grid-cols-3 gap-5 text-xs">
+        <div class="p-4 rounded-xl bg-[#f7faf7] border border-[#dce6db]">
+          <p class="font-bold text-sm text-[#243c32] border-b border-[#dce6db] pb-2 mb-2">Class: Pelanggan</p>
+          <p class="text-[#4c6156]">+ idPelanggan: String<br>+ nama: String<br>+ noWhatsApp: String<br>+ buatPesanan(): Pesanan</p>
+        </div>
+        <div class="p-4 rounded-xl bg-[#f7faf7] border border-[#dce6db]">
+          <p class="font-bold text-sm text-[#243c32] border-b border-[#dce6db] pb-2 mb-2">Class: Pesanan</p>
+          <p class="text-[#4c6156]">+ kodeNota: String<br>+ cabang: String<br>+ paketLayanan: Layanan<br>+ status: Enum(4 Tahap)<br>+ terbitkanNota(): Nota</p>
+        </div>
+        <div class="p-4 rounded-xl bg-[#f7faf7] border border-[#dce6db]">
+          <p class="font-bold text-sm text-[#243c32] border-b border-[#dce6db] pb-2 mb-2">Class: AdminCabang</p>
+          <p class="text-[#4c6156]">+ namaCabang: String<br>+ ubahStatusPesanan(): void<br>+ cekStokBahan(): List&lt;Stok&gt;<br>+ hitungPendapatan(): Double</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-[#1b2e26] text-[#cbd8d1] py-8 text-center text-xs">
+    <p class="font-serif-display text-lg font-bold text-white">Mars Shoes Laundry</p>
+    <p class="mt-1">© 2026 Mars Shoes Laundry Yogyakarta. Seluruh Hak Cipta Dilindungi.</p>
+  </footer>
+
+  <!-- ==================== JAVASCRIPT DATA & INTERAKTIVITAS ==================== -->
+  <script>
+    const STATUS_STEPS = ["Diterima", "Diproses", "Selesai", "Diambil"];
+
+    let orders = [
+      { kode: "MSL-2601", nama: "Charles Leclerc", wa: "081211001616", cabang: "Cabang Jogokaryan", paket: "Deep Clean", sepatu: "Nike Air Force 1 White", harga: 45000, status: "Diproses", catatan: "Tali sepatu disikat lembut" },
+      { kode: "MSL-2602", nama: "Max Verstappen", wa: "081211000101", cabang: "Cabang Gondokusuman", paket: "Unyellowing", sepatu: "Adidas Samba OG", harga: 65000, status: "Selesai", catatan: "Fokus bagian midsole" },
+      { kode: "MSL-2603", nama: "Lewis Hamilton", wa: "081211004444", cabang: "Cabang Kotagede", paket: "Repaint Leather", sepatu: "Dr. Martens 1461 Black", harga: 110000, status: "Diproses", catatan: "Cat ulang bagian ujung depan" },
+      { kode: "MSL-2604", nama: "George Russell", wa: "081211006363", cabang: "Cabang Jogokaryan", paket: "Fast Clean", sepatu: "New Balance 550", harga: 30000, status: "Diambil", catatan: "-" },
+      { kode: "MSL-2605", nama: "Kimi Antonelli", wa: "081211001212", cabang: "Cabang Gondokusuman", paket: "Deep Clean", sepatu: "Converse Chuck 70 Navy", harga: 45000, status: "Diterima", catatan: "-" },
+      { kode: "MSL-2606", nama: "Isack Hadjar", wa: "081211002020", cabang: "Cabang Kotagede", paket: "Deep Clean", sepatu: "Vans Old Skool", harga: 45000, status: "Selesai", catatan: "-" },
+      { kode: "MSL-2607", nama: "Lando Norris", wa: "081211000404", cabang: "Cabang Jogokaryan", paket: "Unyellowing", sepatu: "Air Jordan 1 Low", harga: 65000, status: "Diproses", catatan: "-" },
+      { kode: "MSL-2608", nama: "Carlos Sainz", wa: "081211005555", cabang: "Cabang Gondokusuman", paket: "Deep Clean", sepatu: "Asics Gel-Kayano 14", harga: 45000, status: "Diambil", catatan: "-" },
+      { kode: "MSL-2609", nama: "Oscar Piastri", wa: "081211008181", cabang: "Cabang Kotagede", paket: "Fast Clean", sepatu: "Puma Palermo", harga: 30000, status: "Diterima", catatan: "-" },
+      { kode: "MSL-2610", nama: "Fernando Alonso", wa: "081211001414", cabang: "Cabang Jogokaryan", paket: "Repaint Leather", sepatu: "Clarks Wallabee Suede", harga: 110000, status: "Selesai", catatan: "-" },
+      { kode: "MSL-2611", nama: "Pierre Gasly", wa: "081211001010", cabang: "Cabang Gondokusuman", paket: "Deep Clean", sepatu: "Salomon XT-6", harga: 45000, status: "Diproses", catatan: "-" },
+      { kode: "MSL-2612", nama: "Yuki Tsunoda", wa: "081211002222", cabang: "Cabang Kotagede", paket: "Fast Clean", sepatu: "Onitsuka Tiger Mexico 66", harga: 30000, status: "Diambil", catatan: "-" }
+    ];
+
+    const stockData = [
+      { cabang: "Cabang Jogokaryan", bahan: "Cairan Unyellowing Midsole (500ml)", sisa: "0 Botol", status: "Habis" },
+      { cabang: "Cabang Jogokaryan", bahan: "Sikat Bulu Kuda (Horsehair Brush)", sisa: "2 Unit", status: "Menipis" },
+      { cabang: "Cabang Gondokusuman", bahan: "Leather Paint Hitam Matte", sisa: "0 Botol", status: "Habis" },
+      { cabang: "Cabang Gondokusuman", bahan: "Parfum Sepatu Anti-Bakteri", sisa: "1 Botol", status: "Menipis" },
+      { cabang: "Cabang Kotagede", bahan: "PH-Neutral Shoe Cleaner (1L)", sisa: "0 Jerigen", status: "Habis" },
+      { cabang: "Cabang Kotagede", bahan: "Silica Gel & Plastik Wrapping", sisa: "1 Pak", status: "Menipis" }
+    ];
+
+    function formatRupiah(num) {
+      return "Rp " + num.toLocaleString("id-ID");
+    }
+
+    function switchRole(role) {
+      ["pelanggan", "admin", "uml"].forEach(r => {
+        document.getElementById("view-" + r).classList.toggle("hidden", r !== role);
+        const btn = document.getElementById("tab-" + r);
+        if (btn) {
+          if (r === role) {
+            btn.className = "px-3 py-1.5 rounded-lg bg-[#243c32] text-white shadow-sm transition";
+          } else {
+            btn.className = "px-3 py-1.5 rounded-lg text-[#486154] hover:text-[#243c32] transition";
+          }
+        }
+      });
+      if (role === "admin") renderAdminDashboard();
+    }
+
+    function pilihPaket(namaPaket) {
+      const select = document.getElementById("inputPaket");
+      select.value = namaPaket;
+      document.getElementById("pesan").scrollIntoView({ behavior: "smooth" });
+    }
+
+    function populateTrackingSelector(selectedKode = null) {
+      const selector = document.getElementById("trackingSelector");
+      selector.innerHTML = orders.map(o =>
+        `<option value="${o.kode}" ${o.kode === selectedKode ? "selected" : ""}>${o.nama} (${o.kode} — ${o.paket})</option>`
+      ).join("");
+      renderTrackingAndNota();
+    }
+
+    function renderTrackingAndNota() {
+      const kode = document.getElementById("trackingSelector").value;
+      const order = orders.find(o => o.kode === kode) || orders[0];
+      const currentIdx = STATUS_STEPS.indexOf(order.status);
+
+      // Render 4 Tahap
+      document.getElementById("trackingProgress").innerHTML = `
+        <div class="flex items-center justify-between text-xs mb-3">
+          <span class="font-semibold text-[#243c32]">${order.sepatu}</span>
+          <span class="px-2.5 py-0.5 rounded-full bg-[#243c32] text-white font-semibold">${order.status}</span>
+        </div>
+        <div class="grid grid-cols-4 gap-2 text-center">
+          ${STATUS_STEPS.map((step, idx) => {
+            const active = idx <= currentIdx;
+            return `
+              <div class="p-2 rounded-lg border ${active ? "bg-[#243c32] text-white border-[#243c32]" : "bg-white text-[#7b8f84] border-[#dce6db]"}">
+                <div class="text-[10px] font-bold">${idx + 1}. ${step}</div>
+              </div>
+            `;
+          }).join("")}
+        </div>
+      `;
+
+      // Render Nota Digital
+      document.getElementById("notaDigitalCard").innerHTML = `
+        <div class="flex items-center justify-between border-b border-dashed border-[#e89eb0] pb-4 mb-4">
+          <div>
+            <span class="text-[10px] font-bold uppercase tracking-widest text-[#c75b7a]">Nota Digital Resmi</span>
+            <h4 class="font-serif-display text-2xl font-bold text-[#243c32]">Mars Shoes Laundry</h4>
+          </div>
+          <div class="text-right">
+            <span class="text-xs font-bold text-[#243c32] block">${order.kode}</span>
+            <span class="text-[11px] text-[#6b8276]">${order.cabang}</span>
+          </div>
+        </div>
+        <div class="space-y-2 text-xs sm:text-sm text-[#3c5247]">
+          <div class="flex justify-between"><span>Nama Pelanggan</span><span class="font-bold text-[#243c32]">${order.nama}</span></div>
+          <div class="flex justify-between"><span>No. WhatsApp</span><span>${order.wa}</span></div>
+          <div class="flex justify-between"><span>Item Sepatu</span><span>${order.sepatu}</span></div>
+          <div class="flex justify-between"><span>Paket Layanan</span><span class="font-semibold">${order.paket}</span></div>
+          <div class="flex justify-between"><span>Status Saat Ini</span><span class="font-bold text-[#c75b7a]">${order.status}</span></div>
+        </div>
+        <div class="mt-4 pt-3 border-t border-[#e5ede4] flex items-center justify-between">
+          <span class="text-xs font-semibold text-[#556b60]">Total Pembayaran</span>
+          <span class="font-serif-display text-2xl font-bold text-[#243c32]">${formatRupiah(order.harga)}</span>
+        </div>
+      `;
+    }
+
+    function submitOrder(e) {
+      e.preventDefault();
+      const nama = document.getElementById("inputNama").value.trim();
+      const wa = document.getElementById("inputWa").value.trim();
+      const cabang = document.getElementById("inputCabang").value;
+      const paketSelect = document.getElementById("inputPaket");
+      const paket = paketSelect.value;
+      const harga = parseInt(paketSelect.options[paketSelect.selectedIndex].dataset.harga, 10);
+      const sepatu = document.getElementById("inputSepatu").value.trim();
+      const catatan = document.getElementById("inputCatatan").value.trim() || "-";
+
+      const newKode = "MSL-" + (2601 + orders.length);
+      orders.unshift({ kode: newKode, nama, wa, cabang, paket, sepatu, harga, status: "Diterima", catatan });
+
+      populateTrackingSelector(newKode);
+      document.getElementById("orderForm").reset();
+      alert("Pesanan berhasil dibuat dengan Kode Nota: " + newKode);
+    }
+
+    function renderAdminDashboard() {
+      const filter = document.getElementById("adminBranchFilter").value;
+      const filteredOrders = filter === "ALL" ? orders : orders.filter(o => o.cabang === filter);
+
+      const aktif = filteredOrders.filter(o => o.status !== "Diambil").length;
+      const diproses = filteredOrders.filter(o => o.status === "Diproses").length;
+      const siapAmbil = filteredOrders.filter(o => o.status === "Selesai").length;
+      const totalPendapatan = filteredOrders.reduce((sum, o) => sum + o.harga, 0);
+
+      document.getElementById("adminKpiGrid").innerHTML = `
+        <div class="bg-white p-5 rounded-2xl border border-[#e0e9df]">
+          <p class="text-xs text-[#5d7368]">Pesanan Aktif</p>
+          <p class="font-serif-display text-3xl font-bold text-[#243c32] mt-1">${aktif} Pesanan</p>
+        </div>
+        <div class="bg-white p-5 rounded-2xl border border-[#e0e9df]">
+          <p class="text-xs text-[#5d7368]">Sedang Diproses</p>
+          <p class="font-serif-display text-3xl font-bold text-amber-600 mt-1">${diproses} Sepatu</p>
+        </div>
+        <div class="bg-white p-5 rounded-2xl border border-[#e0e9df]">
+          <p class="text-xs text-[#5d7368]">Siap Diambil</p>
+          <p class="font-serif-display text-3xl font-bold text-emerald-700 mt-1">${siapAmbil} Sepatu</p>
+        </div>
+        <div class="bg-white p-5 rounded-2xl border border-[#e0e9df]">
+          <p class="text-xs text-[#5d7368]">${filter === "ALL" ? "Pendapatan Semua Cabang" : "Pendapatan Cabang Terpilih"}</p>
+          <p class="font-serif-display text-2xl sm:text-3xl font-bold text-[#c75b7a] mt-1">${formatRupiah(totalPendapatan)}</p>
+        </div>
+      `;
+
+      // Pendapatan Per Cabang
+      const branches = ["Cabang Jogokaryan", "Cabang Gondokusuman", "Cabang Kotagede"];
+      document.getElementById("branchRevenueCards").innerHTML = branches.map(b => {
+        const list = orders.filter(o => o.cabang === b);
+        const rev = list.reduce((s, o) => s + o.harga, 0);
+        return `
+          <div class="p-4 rounded-xl bg-[#f7faf7] border border-[#dce6db]">
+            <p class="text-xs font-bold text-[#243c32]">${b}</p>
+            <p class="font-serif-display text-2xl font-bold text-[#c75b7a] mt-1">${formatRupiah(rev)}</p>
+            <p class="text-[11px] text-[#5e7368] mt-1">Total ${list.length} transaksi tercatat</p>
+          </div>
+        `;
+      }).join("");
+
+      // Tabel Kelola Status
+      document.getElementById("adminOrdersTable").innerHTML = filteredOrders.map(o => `
+        <tr>
+          <td class="py-3 px-3 font-bold text-[#243c32]">${o.kode}</td>
+          <td class="py-3 px-3 font-medium">${o.nama}</td>
+          <td class="py-3 px-3 text-xs text-[#5a6f64]">${o.cabang}</td>
+          <td class="py-3 px-3 text-xs">${o.paket} — <span class="text-[#5a6f64]">${o.sepatu}</span></td>
+          <td class="py-3 px-3 font-semibold">${formatRupiah(o.harga)}</td>
+          <td class="py-3 px-3">
+            <select onchange="updateOrderStatus('${o.kode}', this.value)" class="px-2.5 py-1.5 rounded-lg border border-[#d5e0d4] bg-[#f9fbf9] text-xs font-semibold text-[#243c32]">
+              ${STATUS_STEPS.map(st => `<option value="${st}" ${o.status === st ? "selected" : ""}>${st}</option>`).join("")}
+            </select>
+          </td>
+        </tr>
+      `).join("");
+
+      // Tabel Stok Bahan
+      const filteredStock = filter === "ALL" ? stockData : stockData.filter(s => s.cabang === filter);
+      document.getElementById("adminStockTable").innerHTML = filteredStock.map(s => `
+        <tr>
+          <td class="py-3 px-3 font-semibold text-[#243c32]">${s.cabang}</td>
+          <td class="py-3 px-3">${s.bahan}</td>
+          <td class="py-3 px-3 font-bold">${s.sisa}</td>
+          <td class="py-3 px-3">
+            <span class="px-2.5 py-1 rounded-full text-[11px] font-bold ${s.status === "Habis" ? "bg-rose-100 text-rose-700" : "bg-amber-100 text-amber-700"}">
+              ${s.status}
+            </span>
+          </td>
+        </tr>
+      `).join("");
+    }
+
+    function updateOrderStatus(kode, newStatus) {
+      const target = orders.find(o => o.kode === kode);
+      if (target) {
+        target.status = newStatus;
+        populateTrackingSelector(kode);
+        renderAdminDashboard();
+      }
+    }
+
+    // Inisialisasi awal
+    populateTrackingSelector();
+  </script>
+</body>
+</html>
